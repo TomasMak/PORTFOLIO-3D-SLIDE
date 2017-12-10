@@ -217,5 +217,6 @@ span {
     color: #F0F0F0;
   /*  transform: skew(+15deg);*/
     cursor: crosshair;
+    font-weight: bold;
     /*transition: all 0.4s;  */
   }
