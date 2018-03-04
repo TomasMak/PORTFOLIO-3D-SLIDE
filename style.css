@@ -7,59 +7,15 @@ body {
   background-color: #DDDDDD;
   height: auto;
   margin-bottom: none;
-/*  overflow: hidden;*/
 
    }
 
-/*#jquery-script-menu {
-position: fixed;
-height: 90px;
-width: 100%;
-top: 0;
-left: 0;
-border-top: 5px solid #316594;
-background: #fff;
--moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
--webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
-z-index: 999999;
-padding: 10px 0;
--webkit-box-sizing:content-box;
--moz-box-sizing:content-box;
-box-sizing:content-box;
-}*/
-
-/*.jquery-script-center {
-width: 960px;
-margin: 0 auto;
-}
-.jquery-script-center ul {
-width: 212px;
-float:left;
-line-height:45px;
-margin:0;
-padding:0;
-list-style:none;
-}*/
-/*.jquery-script-center a {
-  text-decoration:none;
-}
-.jquery-script-ads {
-width: 728px;
-height:90px;
-float:right;
-}
-.jquery-script-clear {
-clear:both;
-height:0;
-}*/
-
-.clear { clear: both; }
 
 .controls {
   width: 100%;
   margin-bottom: 8px;
   padding-bottom: 8px;
+  background-color: transparent;
 }
 
 .cbcontrol {
@@ -76,6 +32,7 @@ height:0;
   -ms-user-select: none;
   user-select: none;
   background-color: transparent;
+  margin-bottom: 10px;
 }
 
 #cbControlRight { 
@@ -98,8 +55,8 @@ height:0;
   height: 600px;
   overflow: hidden;
   width: 100%;
-  padding-top: 25px;
-  z-index: 10;
+  padding-top: 10px;
+  z-index: 9999;
   position: relative;
   -webkit-backface-visibility: hidden;
 }
@@ -108,9 +65,14 @@ section {
   margin-top: 10px; 
 }
 
+img:hover {
+  cursor: crosshair;
+  color: #F0F0F0;
+}
+
 .cbImage {
-  width: 170px;
-  height: 238px;
+  width: 270px;
+  max-height: 500px;
   float: left;
   margin: 25px 0px 25px 0px;
   color: white;
@@ -120,15 +82,13 @@ section {
   transform-style: preserve-3d;
 
 }
-img:hover {
-  cursor: crosshair;
-  color: #F0F0F0;
-}
 
 .cbImage img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 500px;
   padding-top: 20px;
+  padding-bottom: 20px;
 
 }
 /*img:hover {
@@ -146,9 +106,10 @@ img:hover {
   transition-property: transform;
 }*/
 .cbImage:active {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
   cursor: crosshair;
+  z-index: 1000;
 }
 
 .inactiveLeft {
@@ -184,14 +145,19 @@ img:hover {
   -O-transition: all .5s ease-out;
   transition: all .5s ease-out;
   width: 450px;
-  height: 478px;
-/*  box-shadow: 0 2px 3px 2px #696969;*/
-
+  height: 280px;
+}
+.active img {
+  width: 100%
+  height: auto;
 }
 
 .intro { color: #fff; }
 span {
   padding: 5px;
+}
+footer {
+  background-color: transparent;
 }
 #name {
   font-size: 15px;
@@ -219,8 +185,52 @@ span {
   }
   span:hover { 
     color: #F0F0F0;
-  /*  transform: skew(+15deg);*/
     cursor: crosshair;
-    font-weight: bold;
-    /*transition: all 0.4s;  */
+    font-weight: bold;    
   }
+
+  @media (min-width: 1450px) {
+
+.stage {
+  background-color: transparent;
+  float: left;
+  height: 900px;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 50px;
+  margin-top: 50px;
+  z-index: 10;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+   }
+   .active {
+  z-index: 100;
+  -webkit-transform: perspective(500px) rotateY(0deg);
+  -O-transform: perspective(500px) rotateY(0deg);
+  transform: perspective(500px) rotateY(0deg);
+  -webkit-transition: all .5s ease-out;
+  -O-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  width: 650px;
+  height: 678px;
+  }
+
+  .cbcontrol {
+  font-size: 37px;
+  margin-bottom: 30px;
+}
+
+#cbControlRight { 
+  text-align: right;
+  padding-right: 35px; 
+}
+#cbControlLeft { 
+  text-align: left;
+  padding-left: 35px;
+ }
+
+#name, #phone, #email {
+  font-size: 25px;
+ }
+
+}
