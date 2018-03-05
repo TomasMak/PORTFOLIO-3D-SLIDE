@@ -194,7 +194,7 @@ footer {
 .stage {
   background-color: transparent;
   float: left;
-  height: 900px;
+  height: 600px;
   overflow: hidden;
   width: 100%;
   padding-top: 50px;
@@ -203,7 +203,27 @@ footer {
   position: relative;
   -webkit-backface-visibility: hidden;
    }
-   .active {
+   .cbImage {
+  width: 270px;
+  max-height: 500px;
+  float: left;
+  margin: 25px 0px 25px 0px;
+  color: white;
+ /* box-shadow: 0px 2.5px 5px 0px #D6D6D6;*/
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+}
+
+.cbImage img {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+  .active {
   z-index: 100;
   -webkit-transform: perspective(500px) rotateY(0deg);
   -O-transform: perspective(500px) rotateY(0deg);
@@ -211,13 +231,20 @@ footer {
   -webkit-transition: all .5s ease-out;
   -O-transition: all .5s ease-out;
   transition: all .5s ease-out;
-  width: 650px;
-  height: 678px;
+  width: 500px;
+  height: 378px;
+/*  max-width: 650px;
+  max-height: 678px;*/
+  }
+  .active img {
+    width: 100%;
+  height: auto;
   }
 
   .cbcontrol {
   font-size: 37px;
   margin-bottom: 30px;
+  margin-top: 0px;
 }
 
 #cbControlRight { 
