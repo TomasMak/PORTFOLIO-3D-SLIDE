@@ -1,4 +1,4 @@
-* {
+*, html {
   margin: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, sans-serif;
@@ -89,22 +89,9 @@ img:hover {
   max-height: 500px;
   padding-top: 20px;
   padding-bottom: 20px;
+  
 
 }
-/*img:hover {
-  box-shadow: 0 1px 5px 1px white;
-  }*/
-/*  .hvr-grow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}*/
 .cbImage:active {
   -webkit-transform: scale(1.25);
   transform: scale(1.25);
@@ -188,16 +175,19 @@ footer {
     cursor: crosshair;
     font-weight: bold;    
   }
-
+/* Only Large screens */
   @media (min-width: 1450px) {
+    section { 
+  margin-top: 0px; 
+}
 
 .stage {
   background-color: transparent;
   float: left;
   height: 600px;
-  overflow: hidden;
+  overflow: ;
   width: 100%;
-  padding-top: 50px;
+/*  padding-top: 50px;*/
   margin-top: 50px;
   z-index: 10;
   position: relative;
@@ -233,9 +223,10 @@ footer {
   transition: all .5s ease-out;
   width: 500px;
   height: 378px;
+    }
 /*  max-width: 650px;
   max-height: 678px;*/
-  }
+
   .active img {
     width: 100%;
   height: auto;
@@ -258,6 +249,7 @@ footer {
 
 #name, #phone, #email {
   font-size: 25px;
+  margin-bottom: 0;
  }
 
 }
